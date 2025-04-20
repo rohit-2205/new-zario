@@ -15,32 +15,9 @@ Newzario is a sleek, responsive news web application that delivers real-time hea
 🌐 Single-page behavior (No reloads or new tabs)
 
 🛠️ Built With
-HTML5
-
-CSS3
-
-JavaScript
+HTML5, CSS3, JavaScript
 
 News API for fetching data
 
-Vercel for deployment
+Vercel for deployment - Visit the live app here: https://newzario.vercel.app
 
-📦 Folder Structure
-bash
-Copy
-Edit
-/Newzario
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   └── (icons/images used in UI)
-└── README.md
-🌍 Live Demo
-Visit the live app here: https://newzario.vercel.app
-
-📷 Preview
-
-📩 Contact
-For feedback or queries, feel free to reach out:
-📧 info@newzario.com
