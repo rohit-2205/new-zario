@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newzario</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="main-nav container flex">
+      <a href="#" onclick="reload()" class="company-logo">
+        <img src="./assets/icons8-google-news.svg" alt="company logo" />
+        <h3 class="site-name">Newzario</h3>
+      </a>
+      <div class="nav-links">
+        <ul class="flex">
+          <li class="hover-link nav-item" id="Home" onclick="reload()">Home</li>
+          <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+          <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+          <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+          <li class="hover-link" onclick="scrollToSection('about')">About</li>
+          <li class="hover-link" onclick="scrollToSection('contact')">Contact Us</li>
+        </ul>
+      </div>
+      <div class="search-bar flex">
+        <input id="search-text" type="text" class="news-input" placeholder="e.g. Science" />
+        <button id="search-button" class="search-button">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="cards-container container flex" id="cards-container"></div>
+  </main>
+
+  <!-- Loading Spinner -->
+  <div id="loader" class="loader hidden"></div>
+
+  <!-- News Card Template -->
+  <template id="template-news-card">
+    <div class="card">
+      <div class="card-header">
+        <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img" />
+      </div>
+      <div class="card-content">
+        <h3 id="news-title">This is the Title</h3>
+        <h6 class="news-source" id="news-source">End Gadget</h6>
+        <p class="news-desc" id="news-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit...
+        </p>
+      </div>
+    </div>
+  </template>
+
+<section id="about" class="about-section container flex">
+    <div class="about-text">
+      <h2  >About Us</h2>
+      <h2>Empowering readers with real-time, reliable <span class="highlight">news updates</span>.</h2>
+      <p>
+        Newzario is your one-stop destination for breaking stories across Finance, Politics, Sports, and more. 
+        We use powerful APIs and smart algorithms to bring you accurate, personalized news feeds — fast, reliable, and on the go.
+      </p>
+      <a href="#contact" class="signup-button">Contact Us</a>
+    </div>
+    <div class="about-image">
+      <img src="./assets/news-desk.png" alt="News App Illustration" />
+    </div>
+  </section>
+  
+
+<section id="contact" class="contact-section container flex">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email, call, or complete the form to learn how Newzario can help you stay informed.</p>
+      <p><strong>Email:</strong> info@newzario.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <a href="#" class="support-link">Customer Support</a>
+  
+      <div class="contact-details">
+        <div>
+          <h4>Customer Support</h4>
+          <p>Our support team is available around the clock for any concerns or queries.</p>
+        </div>
+        <div>
+          <h4>Feedback & Suggestions</h4>
+          <p>Your input is crucial to shaping the future of Newzario.</p>
+        </div>
+        <div>
+          <h4>Media Inquiries</h4>
+          <p>For press or media questions, email us at media@newzario.com</p>
+        </div>
+      </div>
+    </div>
+  
+    <form class="contact-form">
+      <h3>Get in Touch</h3>
+      <div class="form-group">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Phone Number" required />
+      </div>
+      <textarea rows="4" placeholder="How can we help?" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+      <p class="form-note">By contacting us, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+    </form>
+  </section>
+  
+
+
+  <script src="script.js"></script>
+</body>
+</html>
